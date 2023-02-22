@@ -40,6 +40,15 @@ const AutoSlider = (): JSX.Element => {
         speed: 2000,
         autoplaySpeed: 2000,
         cssEase: "linear",
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+        ],
     };
 
     return (
