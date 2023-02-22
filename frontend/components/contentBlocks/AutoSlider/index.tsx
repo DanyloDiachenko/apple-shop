@@ -46,6 +46,8 @@ const AutoSlider = (): JSX.Element => {
                 breakpoint: 991,
                 settings: {
                     slidesToShow: 2,
+                    autoplay: true,
+                    swipeToSlide: true,
                 },
             },
         ],
