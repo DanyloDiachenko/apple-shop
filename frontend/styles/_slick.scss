@@ -103,3 +103,7 @@
         }
     }
 }
+
+.slick-slide.slick-active > div > div {
+    outline: none;
+}
