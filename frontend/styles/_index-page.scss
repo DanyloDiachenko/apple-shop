@@ -12,3 +12,21 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.about {
+    @media (max-width: 991px) {
+        text-align: center;
+    }
+    .about-right-col {
+        display: flex;
+        justify-content: end;
+        @media (max-width: 991px) {
+            justify-content: center;
+        }
+        .about-item {
+            h3 {
+                color: var(--primary);
+            }
+        }
+    }
+}

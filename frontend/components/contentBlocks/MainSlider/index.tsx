@@ -85,7 +85,7 @@ const MainSlider = (): JSX.Element => {
                             </Button>
                             <Button>
                                 <h5>
-                                    <Trans string="Посмотреть похожие" />
+                                    <Trans string="Купить прямо сейчас" />
                                 </h5>
                             </Button>
                         </div>
