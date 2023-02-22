@@ -6,7 +6,7 @@ const MacbookBlock = () => {
     return (
         <section className="container mt-10 row align-items-center macbooks-main center">
             <div className="col-lg-6 col-md-12">
-                <h4>MacBook Pro 14" M2</h4>
+                <h4>MacBook Pro 14{`"`} M2</h4>
                 <p className="mt-3">
                     <Trans string="Переработанная и развитая система питания от" />{" "}
                     <b>
