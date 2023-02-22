@@ -63,7 +63,7 @@ const MainSlider = (): JSX.Element => {
                 {...settings}
             >
                 {images.map((img) => (
-                    <div className="slider-wrapper">
+                    <div key={img.title} className="slider-wrapper">
                         <div className="img-wrapper">
                             <div key={img.title} className="img-item">
                                 <img
