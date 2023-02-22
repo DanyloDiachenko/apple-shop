@@ -5,3 +5,11 @@
         margin-top: 75px;
     }
 }
+
+.center {
+    @media (max-width: 991px) {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
