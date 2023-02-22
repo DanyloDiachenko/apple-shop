@@ -1,0 +1,7 @@
+.mt-10 {
+    margin-top: 100px;
+
+    @media (max-width: 991px) {
+        margin-top: 50px;
+    }
+}

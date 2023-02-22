@@ -1,0 +1,105 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-dots li button:before {
+    color: white !important;
+}
+
+.arrow {
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background: #1f1f1f;
+    background-clip: padding-box;
+
+    svg {
+        width: 25px;
+        height: 25px;
+
+        @media (max-width: 991px) {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 5px 10px;
+    }
+}
+
+.arrow::after {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: var(--gradient);
+    content: "";
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.img-wrapper {
+    position: relative;
+
+    .img-item {
+        display: flex !important;
+        justify-content: center;
+        outline: none;
+        opacity: 0.9;
+
+        img {
+            width: 70%;
+            height: 600px;
+
+            @media (max-width: 1400px) {
+                width: 97%;
+                height: auto;
+            }
+        }
+    }
+
+    .img-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px;
+        text-align: center;
+
+        @media (max-width: 500px) {
+            position: static;
+        }
+    }
+}
+
+.buttons-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    button {
+        margin-top: 20px;
+    }
+
+    @media (max-width: 1400px) {
+        width: 97%;
+        height: auto;
+    }
+
+    @media (max-width: 750px) {
+        display: block;
+
+        button {
+            display: block;
+            margin: 20px auto 0 auto;
+        }
+    }
+}

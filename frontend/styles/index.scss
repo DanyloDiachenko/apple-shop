@@ -1,0 +1,14 @@
+@import "./fonts";
+@import "./typography";
+@import "./header";
+@import "./bootstrap";
+@import "./varibles";
+@import "./ui";
+@import "_slick.scss";
+@import "./custom-classes";
+@import "./index-page";
+
+body {
+    background: #1f1f1f;
+    color: white;
+}

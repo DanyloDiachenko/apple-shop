@@ -1,0 +1,14 @@
+.main-page-slider-bg {
+    width: 90%;
+    height: 100%;
+    background: rgba(102, 18, 79, 0.17);
+    filter: blur(50px);
+    border-radius: 300px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}

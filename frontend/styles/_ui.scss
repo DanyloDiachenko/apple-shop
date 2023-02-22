@@ -1,0 +1,48 @@
+.title-bordered {
+    color: white;
+    text-decoration: none;
+
+    &::after {
+        content: "";
+        height: 2px;
+        width: 0;
+        transition: width 0.5s;
+        background: var(--gradient);
+        display: block;
+        margin-top: 5px;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.btn-ui {
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background: #1f1f1f;
+    background-clip: padding-box;
+    color: white;
+
+    &:hover {
+        background: var(--gradien-bg);
+        transition: 0.5s;
+    }
+}
+
+.btn-ui::after {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: var(--gradient-additional);
+    content: "";
+    z-index: -1;
+    border-radius: 30px;
+}

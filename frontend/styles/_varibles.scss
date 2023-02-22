@@ -1,0 +1,16 @@
+:root {
+    --inactive: #c2c2c2;
+    --gray-dark: #282828;
+    --gradient: linear-gradient(
+        270deg,
+        #a92a6f 0%,
+        #a92a6f 0.01%,
+        #d53ee2 100%
+    );
+    --gradient-additional: linear-gradient(
+        89.91deg,
+        #a92a6f 0.06%,
+        #a317ba 99.92%
+    );
+    --gradient-bg: linear-gradient(90deg, #5c143b 0%, #a317ba 100%);
+}
