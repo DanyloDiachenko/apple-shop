@@ -1,7 +1,7 @@
 .main-page-slider-bg {
     width: 90%;
     height: 100%;
-    background: rgba(102, 18, 79, 0.17);
+    background: var(--bg-blur);
     filter: blur(50px);
     border-radius: 300px;
     position: absolute;
@@ -16,6 +16,16 @@
 .about {
     @media (max-width: 991px) {
         text-align: center;
+        position: relative;
+    }
+    .main-page-about-bg {
+        width: 90%;
+        height: 100%;
+        background: var(--bg-blur);
+        filter: blur(50px);
+        border-radius: 300px;
+        position: absolute;
+        z-index: -10;
     }
     .about-right-col {
         display: flex;

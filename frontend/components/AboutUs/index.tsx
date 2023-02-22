@@ -23,7 +23,11 @@ const AboutUs = (): JSX.Element => {
             className="container mt-10 row align-items-center about"
             style={{ maxWidth: "1400px" }}
         >
-            <div className="col-lg-6 col-md-12">
+            <div
+                className="col-lg-6 col-md-12"
+                style={{ position: "relative" }}
+            >
+                <div className="main-page-about-bg"></div>
                 <h2>
                     <Trans string="Мир AppleShop" />
                 </h2>
