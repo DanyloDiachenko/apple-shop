@@ -1,6 +1,7 @@
 import Head from "next/head";
 import MainSlider from "components/contentBlocks/MainSlider";
-import AboutUs from 'components/AboutUs';
+import AboutUs from "components/AboutUs";
+import AutoSlider from "components/contentBlocks/AutoSlider";
 
 const Home = (): JSX.Element => {
     return (
@@ -29,6 +30,7 @@ const Home = (): JSX.Element => {
             <main>
                 <MainSlider />
                 <AboutUs />
+                <AutoSlider />
             </main>
         </>
     );
