@@ -1,7 +1,19 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
 
-const Button = ({ children }: { children: ReactNode }) => {
-    return <button className="btn-ui">{children}</button>;
+interface IProps
+    extends DetailedHTMLProps<
+        ButtonHTMLAttributes<HTMLButtonElement>,
+        HTMLButtonElement
+    > {
+    children: ReactNode;
+}
+
+const Button = ({ children, ...props }: IProps) => {
+    return (
+        <button className="btn-ui" {...props}>
+            {children}
+        </button>
+    );
 };
 
 export default Button;

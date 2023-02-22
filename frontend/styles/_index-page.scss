@@ -1,16 +1,24 @@
-.main-page-slider-bg {
-    width: 90%;
-    height: 100%;
-    background: var(--bg-blur);
-    filter: blur(50px);
-    border-radius: 300px;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+.main-slider {
+    button {
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+    }
+
+    .main-page-slider-bg {
+        width: 90%;
+        height: 100%;
+        background: var(--bg-blur);
+        filter: blur(50px);
+        border-radius: 300px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .about {
@@ -37,6 +45,41 @@
             h3 {
                 color: var(--primary);
             }
+        }
+    }
+}
+
+.macbooks-main {
+    button {
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+    }
+
+    .right-col {
+        position: relative;
+        display: flex;
+        justify-content: end;
+
+        @media (max-width: 991px) {
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .img-wrapper {
+            img {
+                width: 600px;
+            }
+        }
+        .main-page-maccbook-bg {
+            width: 70%;
+            height: 100%;
+            background: var(--bg-blur);
+            filter: blur(50px);
+            border-radius: 300px;
+            position: absolute;
+            top: 0;
+            z-index: -10;
         }
     }
 }

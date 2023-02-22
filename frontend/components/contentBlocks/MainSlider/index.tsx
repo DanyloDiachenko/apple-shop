@@ -57,7 +57,7 @@ const MainSlider = (): JSX.Element => {
     ];
 
     return (
-        <section className="container mt-10">
+        <section className="container mt-10 main-slider">
             <Slider
                 className="d-flex align-items-center justify-content-between"
                 {...settings}
