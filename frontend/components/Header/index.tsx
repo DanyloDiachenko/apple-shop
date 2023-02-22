@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 import { RxHamburgerMenu } from "react-icons/rx";
+import { TfiClose as CloseIcon } from "react-icons/tfi";
 
 import Trans from "inc/locale/Trans";
 import translate from "inc/locale/transFunc";
@@ -67,9 +68,17 @@ const Header = (): JSX.Element => {
                 </div>
                 <div className="col-5 d-flex align-items-center justify-content-end right-col">
                     <div className="burger-menu">
-                        <RxHamburgerMenu
-                            onClick={(): void => setBurgerMenu(!burgerMenu)}
-                        />
+                        {burgerMenu ? (
+                            <CloseIcon
+                                fill="white"
+                                onClick={(): void => setBurgerMenu(!burgerMenu)}
+                            />
+                        ) : (
+                            <RxHamburgerMenu
+                                onClick={(): void => setBurgerMenu(!burgerMenu)}
+                            />
+                        )}
+
                         {burgerMenu && (
                             <div className="content">
                                 <div>

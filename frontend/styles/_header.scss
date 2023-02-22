@@ -96,9 +96,10 @@ header {
                 width: 318px;
                 position: absolute;
                 z-index: 10;
-                right: 0;
+                right: -35px;
+                top: 70px;
                 background: #210c1b;
-                border-radius: 30px;
+
                 text-align: center;
 
                 @media (max-width: 400px) {
