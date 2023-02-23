@@ -46,3 +46,55 @@
     z-index: -1;
     border-radius: 30px;
 }
+
+.card-lg {
+    position: relative;
+    width: 490px;
+    background: var(--gradient-card);
+    border-radius: 30px;
+
+    .title {
+        font-weight: 800;
+        padding: 20px 40px;
+    }
+
+    .content {
+        padding: 0 40px;
+
+        .price-buy {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .price {
+                .price-past {
+                    text-decoration: line-through;
+                    color: var(--inactive);
+                }
+            }
+
+            button {
+                padding: 15px 40px;
+                border: 2px solid #a92a6f;
+                background: initial;
+                color: white;
+
+                &:hover {
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    .additional {
+        display: none;
+    }
+
+    &:hover {
+        .additional {
+           /*  position: absolute; */
+            padding: 0 40px;
+            display: block;
+        }
+    }
+}

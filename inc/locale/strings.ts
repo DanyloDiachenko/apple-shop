@@ -127,6 +127,11 @@ const strings: IStrings = {
         uk: "ПРИДБАТИ",
         en: "BUY",
     },
+    Купить: {
+        ru: "Купить",
+        uk: "Придбати",
+        en: "Buy",
+    },
 };
 
 export default strings;
