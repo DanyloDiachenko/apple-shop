@@ -2,7 +2,10 @@ import Trans from "inc/locale/Trans";
 
 import Button from "components/UI/Button";
 
-const CardLg = () => {
+const CardLg = (props) => {
+
+    const { title, img } = props;
+
     return (
         <article className="col-lg-4 col-md-6 col-sm-12 card-lg my-3">
             <h6 className="text-center title">
