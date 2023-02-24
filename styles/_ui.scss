@@ -48,8 +48,9 @@
 }
 
 .card-lg {
+    padding: 0;
     position: relative;
-    width: 490px;
+    max-width: 500px;
     background: var(--gradient-card);
     border-radius: 30px;
 
@@ -58,8 +59,34 @@
         padding: 20px 40px;
     }
 
+    .novelty-discount {
+        width: 100%;
+        position: absolute;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #2c082d 2.93%, #2e051b 100%);
+            border-radius: 10px;
+            width: 150px;
+            height: 40px;
+        }
+    }
+
+    img {
+        width: 300px;
+    }
+
     .content {
         padding: 0 40px;
+
+        .rate {
+            img {
+                width: 40px;
+                height: 40px;   
+            }
+        }
 
         .price-buy {
             display: flex;
@@ -92,7 +119,7 @@
 
     &:hover {
         .additional {
-           /*  position: absolute; */
+            /*  position: absolute; */
             padding: 0 40px;
             display: block;
         }
