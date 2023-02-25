@@ -132,6 +132,11 @@ const strings: IStrings = {
         uk: "Придбати",
         en: "Buy",
     },
+    "на базе операционной системы": {
+        ru: "на базе операционной системы",
+        uk: "на базі операційної системи",
+        en: "operating system based on",
+    },
 };
 
 export default strings;

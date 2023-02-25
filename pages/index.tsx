@@ -4,6 +4,7 @@ import AboutUs from "components/contentBlocks/AboutUs";
 import AutoSlider from "components/contentBlocks/AutoSlider";
 import MacbookBlock from "components/contentBlocks/Macbook";
 import MacbooksShort from "components/contentBlocks/MacbooksShort";
+import IphoneBlock from 'components/contentBlocks/Iphone';
 
 const Home = (): JSX.Element => {
     return (
@@ -35,6 +36,7 @@ const Home = (): JSX.Element => {
                 <AutoSlider />
                 <MacbookBlock />
                 <MacbooksShort />
+                <IphoneBlock />
             </main>
         </>
     );

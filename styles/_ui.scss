@@ -49,12 +49,12 @@
 
 .card-lg {
     padding: 0;
-    position: relative;
     max-width: 420px;
     min-height: 440px;
     margin: 0 auto;
     background: var(--gradient-card);
     border-radius: 30px;
+    position: relative;
 
     @media (max-width: 900px) {
         max-width: 380px;
@@ -157,12 +157,14 @@
     .additional {
         display: none;
     }
-
-    &:hover {
-        .additional {
-            /*  position: absolute; */
-            padding: 0 40px;
-            display: block;
-        }
+}
+.card-lg:hover {
+    .additional {
+        padding: 0 40px;
+        height: 400px;
+        display: block;
+        position: absolute;
+        border: 1px solid red;
+        top: 0;
     }
 }
