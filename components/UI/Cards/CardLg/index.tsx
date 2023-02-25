@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Trans from "inc/locale/Trans";
 
@@ -27,9 +28,10 @@ const CardLg = (props: IProps) => {
     }
 
     return (
-        <article key={key} className="col-lg-4 col-md-6 col-sm-12 card-lg my-3">
+        /* <article className="col-xl-4 col-lg-6 col-sm-12 my-3 mx-auto"> */
+        <div key={key} className="card-lg">
             <h6 className="text-center title">{title}</h6>
-            <div className="d-flex justify-content-between novelty-discount">
+            <div className="novelty-discount">
                 {isNovelty && (
                     <div>
                         <h6>Новинка</h6>
@@ -42,7 +44,7 @@ const CardLg = (props: IProps) => {
                 )}
             </div>
             <div className="d-flex justify-content-center">
-                <img src={src} alt={title} />
+                <img src={src} alt={title} className="img-fluid" />
             </div>
             <div className="content">
                 <div className="d-flex justify-content-center gap-2 mt-4 rate">
@@ -64,11 +66,13 @@ const CardLg = (props: IProps) => {
                         )}
                     </div>
                     <div>
-                        <Button>
-                            <h6>
-                                <Trans string="Купить" />
-                            </h6>
-                        </Button>
+                        <Link href={`/macbooks/${id}`}>
+                            <Button>
+                                <h6>
+                                    <Trans string="Купить" />
+                                </h6>
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -76,14 +80,15 @@ const CardLg = (props: IProps) => {
                 {kharacteristics.map((khar: ICharacteristic) => (
                     <div
                         key={khar.key}
-                        className="d-flex align-items-center justify-content-between mt-4"
+                        className="d-flex align-items-center justify-content-between mt-3"
                     >
                         <span>{khar.key}</span>
                         <span>{khar.value}</span>
                     </div>
                 ))}
             </div>
-        </article>
+        </div>
+        /* </article> */
     );
 };
 

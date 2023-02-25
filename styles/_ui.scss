@@ -50,9 +50,22 @@
 .card-lg {
     padding: 0;
     position: relative;
-    max-width: 500px;
+    max-width: 420px;
+    min-height: 440px;
+    margin: 0 auto;
     background: var(--gradient-card);
     border-radius: 30px;
+
+    @media (max-width: 900px) {
+        max-width: 380px;
+    }
+
+    @media (max-width: 450px) {
+        width: 300px;
+    }
+    @media (max-width: 360px) {
+        width: 250px;
+    }
 
     .title {
         font-weight: 800;
@@ -61,7 +74,13 @@
 
     .novelty-discount {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
         position: absolute;
+
+        @media (max-width: 450px) {
+            position: static;
+        }
 
         div {
             display: flex;
@@ -71,11 +90,19 @@
             border-radius: 10px;
             width: 150px;
             height: 40px;
+
+            @media (max-width: 450px) {
+                width: 130px;
+            }
         }
     }
 
     img {
         width: 300px;
+
+        @media (max-width: 450px) {
+            width: 200px;
+        }
     }
 
     .content {
@@ -84,7 +111,12 @@
         .rate {
             img {
                 width: 40px;
-                height: 40px;   
+                height: 40px;
+
+                @media (max-width: 400px) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
 
@@ -92,6 +124,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media (max-width: 460px) {
+                display: block;
+                text-align: center;
+            }
 
             .price {
                 .price-past {
@@ -105,6 +142,10 @@
                 border: 2px solid #a92a6f;
                 background: initial;
                 color: white;
+
+                @media (max-width: 460px) {
+                    margin-top: 10px;
+                }
 
                 &:hover {
                     z-index: 1;
