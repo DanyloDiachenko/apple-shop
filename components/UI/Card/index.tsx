@@ -7,8 +7,9 @@ import Button from "components/UI/Button";
 
 import IProps from "./props.interface";
 
-const CardLg = (props: IProps) => {
+const Card = (props: IProps) => {
     const {
+        size,
         key,
         id,
         title,
@@ -26,7 +27,7 @@ const CardLg = (props: IProps) => {
     }
 
     return (
-        <article key={key} className="card-lg">
+        <article key={key} className={`card-lg ${size === 'sm' && 'card-sm'}`}>
             <h6 className="text-center title">{title}</h6>
             <div className="novelty-discount">
                 {isNovelty && (
@@ -77,4 +78,4 @@ const CardLg = (props: IProps) => {
     );
 };
 
-export default CardLg;
+export default Card;

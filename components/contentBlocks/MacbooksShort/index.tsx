@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
-import CardLg from "components/UI/Cards/CardLg";
+import Card from "components/UI/Card";
 
 import IMacbook from "./macbook.interface";
 
@@ -63,7 +63,7 @@ const MacbooksShort = () => {
                 {...settings}
             >
                 {macbooks.map((macbook: IMacbook) => (
-                    <CardLg {...macbook} key={String(macbook.id)} />
+                    <Card {...macbook} size="lg" key={String(macbook.id)} />
                 ))}
             </Slider>
         </section>

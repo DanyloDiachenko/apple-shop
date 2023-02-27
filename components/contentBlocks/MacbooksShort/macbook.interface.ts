@@ -4,6 +4,8 @@ export default interface ICharacteristic {
 }
 
 export default interface IMacbook {
+    size: "lg" | "sm";
+    key: string;
     id: number;
     title: string;
     src: string;
