@@ -41,7 +41,7 @@ const CardLg = (props: IProps) => {
                 )}
             </div>
             <div className="d-flex justify-content-center">
-                <img src={src} alt={title} className="img-fluid" />
+                <img src={src} alt={title} className="img-fluid img-product" />
             </div>
             <div className="content">
                 <div className="d-flex justify-content-center gap-2 mt-4 rate">

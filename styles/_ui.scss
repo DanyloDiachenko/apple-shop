@@ -97,11 +97,19 @@
         }
     }
 
-    img {
+    .img-product {
         width: 300px;
+        transition: 0.3s;
 
         @media (max-width: 450px) {
             width: 200px;
+        }
+    }
+    &:hover {
+        @media (min-width: 800px) {
+            .img-product {
+                scale: 1.2;
+            }
         }
     }
 
