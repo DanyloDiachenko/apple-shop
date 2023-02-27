@@ -51,7 +51,7 @@
 
 .macbooks-main {
     button {
-        @media (max-width: 500px) {
+        @media (max-width: 800px) {
             width: 100%;
         }
     }
@@ -60,6 +60,7 @@
         position: relative;
         display: flex;
         justify-content: end;
+        text-align: end;
 
         @media (max-width: 991px) {
             justify-content: center;
@@ -71,6 +72,7 @@
                 width: 600px;
             }
         }
+
         .main-page-maccbook-bg {
             width: 70%;
             height: 100%;
@@ -80,6 +82,16 @@
             position: absolute;
             top: 0;
             z-index: -10;
+        }
+    }
+
+    .left-col {
+        display: flex;
+        justify-content: start;
+
+        @media (max-width: 991px) {
+            display: flex;
+            justify-content: center;
         }
     }
 }

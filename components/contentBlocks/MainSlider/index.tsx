@@ -39,19 +39,19 @@ const MainSlider = (): JSX.Element => {
         {
             title: 'MacBook Pro 14" M2',
             description: "2022 / 3000$",
-            src: "/images/banners/macbook.png",
+            src: "/images/slider/macbook.png",
             link: "/macbooks",
         },
         {
             title: "Iphone 14 Pro Max",
             description: "2022 / 2000$",
-            src: "/images/banners/iphone.png",
+            src: "/images/slider/iphone.png",
             link: "/iphones",
         },
         {
             title: 'Apple iPad Pro 12.9" 2022 M2',
             description: "2022 / 1079$",
-            src: "/images/banners/ipad.png",
+            src: "/images/slider/ipad.png",
             link: "/ipads",
         },
     ];

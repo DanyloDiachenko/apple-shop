@@ -5,27 +5,27 @@ import IImages from "./images.interface";
 const AutoSlider = (): JSX.Element => {
     const images: IImages[] = [
         {
-            src: "/images/banners/macbook-auto-slider.png",
+            src: "/images/slider/macbook-auto-slider.png",
             alt: "macbook",
         },
         {
-            src: "/images/banners/iphone-auto-slider.png",
+            src: "/images/slider/iphone-auto-slider.png",
             alt: "iphone",
         },
         {
-            src: "/images/banners/ipad-auto-slider.png",
+            src: "/images/slider/ipad-auto-slider.png",
             alt: "ipad",
         },
         {
-            src: "/images/banners/macbook1-auto-slider.jpeg",
+            src: "/images/slider/macbook1-auto-slider.jpeg",
             alt: "macbook",
         },
         {
-            src: "/images/banners/iphone1-auto-slider.jpg",
+            src: "/images/slider/iphone1-auto-slider.jpg",
             alt: "iphone",
         },
         {
-            src: "/images/banners/ipad1-auto-slider.png",
+            src: "/images/slider/ipad1-auto-slider.png",
             alt: "ipad",
         },
     ];

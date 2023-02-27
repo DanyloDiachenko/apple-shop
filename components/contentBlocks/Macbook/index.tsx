@@ -31,7 +31,7 @@ const MacbookBlock = () => {
                 <div className="img-wrapper">
                     <img
                         className="img-fluid"
-                        src="/images/banners/macbook-main.png"
+                        src="/images/banners/macbook.png"
                         alt="macbook pro 14 m2"
                     />
                 </div>
