@@ -153,18 +153,4 @@
             }
         }
     }
-
-    .additional {
-        display: none;
-    }
-}
-.card-lg:hover {
-    .additional {
-        padding: 0 40px;
-        height: 400px;
-        display: block;
-        position: absolute;
-        border: 1px solid red;
-        top: 0;
-    }
 }

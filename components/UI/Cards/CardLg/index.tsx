@@ -6,7 +6,6 @@ import Trans from "inc/locale/Trans";
 import Button from "components/UI/Button";
 
 import IProps from "./props.interface";
-import ICharacteristic from "./props.interface";
 
 const CardLg = (props: IProps) => {
     const {
@@ -19,7 +18,6 @@ const CardLg = (props: IProps) => {
         rate,
         price,
         prevPrice,
-        kharacteristics,
     } = props;
 
     let rateArray: number[] = [];
@@ -28,8 +26,7 @@ const CardLg = (props: IProps) => {
     }
 
     return (
-        /* <article className="col-xl-4 col-lg-6 col-sm-12 my-3 mx-auto"> */
-        <div key={key} className="card-lg">
+        <article key={key} className="card-lg">
             <h6 className="text-center title">{title}</h6>
             <div className="novelty-discount">
                 {isNovelty && (
@@ -76,19 +73,7 @@ const CardLg = (props: IProps) => {
                     </div>
                 </div>
             </div>
-            <div className="additional pb-4">
-                {kharacteristics.map((khar: ICharacteristic) => (
-                    <div
-                        key={khar.key}
-                        className="d-flex align-items-center justify-content-between mt-3"
-                    >
-                        <span>{khar.key}</span>
-                        <span>{khar.value}</span>
-                    </div>
-                ))}
-            </div>
-        </div>
-        /* </article> */
+        </article>
     );
 };
 

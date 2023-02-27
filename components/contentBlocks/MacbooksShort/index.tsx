@@ -26,12 +26,12 @@ const MacbooksShort = () => {
         );
     };
     const settings = {
-        dots: true,
         infinite: true,
         slidesToShow: 3,
+        dots: true,
         slidesToScroll: 1,
-        /* nextArrow: <NextArrow onClick={() => {}} />,
-        prevArrow: <PrevArrow onClick={() => {}} />, */
+        nextArrow: <NextArrow onClick={() => {}} />,
+        prevArrow: <PrevArrow onClick={() => {}} />,
         responsive: [
             {
                 breakpoint: 1400,
@@ -57,9 +57,9 @@ const MacbooksShort = () => {
     console.log(macbooks);
 
     return (
-        <section className="container row justify-content-between mt-4">
+        <section className="container row justify-content-between mt-4 slider-details">
             <Slider
-                /* className="d-flex align-items-center justify-content-between" */
+                className="d-flex align-items-center justify-content-between"
                 {...settings}
             >
                 {macbooks.map((macbook: IMacbook) => (

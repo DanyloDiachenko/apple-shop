@@ -1,6 +1,12 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.slider-details {
+    .slick-list {
+        width: 100%;
+    }
+}
+
 .slick-dots li button:before {
     color: white !important;
 }
@@ -19,6 +25,7 @@
     svg {
         width: 25px;
         height: 25px;
+        fill: white;
 
         @media (max-width: 991px) {
             width: 15px;
