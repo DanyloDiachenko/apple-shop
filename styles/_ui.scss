@@ -179,8 +179,9 @@
     }
 
     .img-product {
-        height: 350px;
-        width: 275px;
+        height: auto;
+        width: 200px;
+        height: 270px;
 
         &:hover {
             @media (min-width: 800px) {

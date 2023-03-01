@@ -27,7 +27,7 @@ const Card = (props: IProps) => {
     }
 
     return (
-        <article key={key} className={`card-lg ${size === 'sm' && 'card-sm'}`}>
+        <article key={key} className={`card-lg ${size === "sm" && "card-sm"}`}>
             <h6 className="text-center title">{title}</h6>
             <div className="novelty-discount">
                 {isNovelty && (
@@ -64,7 +64,11 @@ const Card = (props: IProps) => {
                         )}
                     </div>
                     <div>
-                        <Link href={`/macbooks/${id}`}>
+                        <Link
+                            href={`/${
+                                size === "sm" ? "iphones" : "macbooks"
+                            }/${id}`}
+                        >
                             <Button>
                                 <h6>
                                     <Trans string="Купить" />
