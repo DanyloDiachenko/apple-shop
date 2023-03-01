@@ -5,6 +5,7 @@ import AutoSlider from "components/contentBlocks/AutoSlider";
 import MacbookBlock from "components/contentBlocks/Macbook";
 import MacbooksShort from "components/contentBlocks/MacbooksShort";
 import IphoneBlock from 'components/contentBlocks/Iphone';
+import IphonesShort from 'components/contentBlocks/IphonesShort';
 
 const Home = (): JSX.Element => {
     return (
@@ -37,6 +38,7 @@ const Home = (): JSX.Element => {
                 <MacbookBlock />
                 <MacbooksShort />
                 <IphoneBlock />
+                <IphonesShort />
             </main>
         </>
     );

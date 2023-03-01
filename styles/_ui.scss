@@ -61,10 +61,7 @@
     }
 
     @media (max-width: 450px) {
-        width: 300px;
-    }
-    @media (max-width: 360px) {
-        width: 250px;
+        width: 95%;
     }
 
     .title {
@@ -125,6 +122,10 @@
                     width: 30px;
                     height: 30px;
                 }
+                @media (max-width: 370px) {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
 
@@ -155,6 +156,11 @@
                     margin-top: 10px;
                 }
 
+                @media (max-width: 350px) {
+                    padding: 10px 0;
+                    width: 100%;
+                }
+
                 &:hover {
                     z-index: 1;
                 }
@@ -164,4 +170,30 @@
 }
 .card-sm {
     width: 350px;
+
+    @media (max-width: 500px) {
+        width: 320px;
+    }
+    @media (max-width: 450px) {
+        width: 95%;
+    }
+
+    .img-product {
+        height: 350px;
+        width: 275px;
+
+        &:hover {
+            @media (min-width: 800px) {
+                .img-product {
+                    scale: 1.2;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            width: 80%;
+            height: auto;
+            margin-top: 10px;
+        }
+    }
 }

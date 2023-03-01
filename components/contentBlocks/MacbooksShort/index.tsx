@@ -6,7 +6,7 @@ import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 import Card from "components/UI/Card";
 
-import IMacbook from "./macbook.interface";
+import IMacbook from './macbook.interface';
 
 const MacbooksShort = () => {
     const [macbooks, setMacbooks] = useState<IMacbook[]>([]);
@@ -53,8 +53,6 @@ const MacbooksShort = () => {
             .then((res: Response) => res.json())
             .then((data: IMacbook[]) => setMacbooks(data));
     }, []);
-
-    console.log(macbooks);
 
     return (
         <section className="container row justify-content-between mt-4 slider-details">

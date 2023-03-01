@@ -1,8 +1,3 @@
-export default interface ICharacteristic {
-    key: string;
-    value: number | string;
-}
-
 export default interface IProps {
     size: "lg" | "sm";
     key: string;
@@ -14,5 +9,4 @@ export default interface IProps {
     rate: number;
     price: number;
     prevPrice: number;
-    kharacteristics: ICharacteristic[];
 }
