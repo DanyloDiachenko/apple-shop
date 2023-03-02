@@ -32,12 +32,16 @@ const Card = (props: IProps) => {
             <div className="novelty-discount">
                 {isNovelty && (
                     <div>
-                        <h6>Новинка</h6>
+                        <h6>
+                            <Trans string="Новинка" />
+                        </h6>
                     </div>
                 )}
                 {isDiscount && (
                     <div>
-                        <h6>Скидка</h6>
+                        <h6>
+                            <Trans string="Скидка" />
+                        </h6>
                     </div>
                 )}
             </div>

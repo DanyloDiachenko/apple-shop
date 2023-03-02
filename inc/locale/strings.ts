@@ -137,6 +137,21 @@ const strings: IStrings = {
         uk: "на базі операційної системи",
         en: "operating system based on",
     },
+    "в 12x раз": {
+        ru: "в 12x раз",
+        uk: "у 12x разів",
+        en: "12x times",
+    },
+    Новинка: {
+        ru: "Новинка",
+        uk: "Новинка",
+        en: "Novelty",
+    },
+    Скидка: {
+        ru: "Скидка",
+        uk: "Скидка",
+        en: "Discount",
+    },
 };
 
 export default strings;

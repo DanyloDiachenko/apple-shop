@@ -6,6 +6,7 @@ import MacbookBlock from "components/contentBlocks/Macbook";
 import MacbooksShort from "components/contentBlocks/MacbooksShort";
 import IphoneBlock from 'components/contentBlocks/Iphone';
 import IphonesShort from 'components/contentBlocks/IphonesShort';
+import IpadBlock from 'components/contentBlocks/Ipad';
 
 const Home = (): JSX.Element => {
     return (
@@ -39,6 +40,7 @@ const Home = (): JSX.Element => {
                 <MacbooksShort />
                 <IphoneBlock />
                 <IphonesShort />
+                <IpadBlock />
             </main>
         </>
     );
