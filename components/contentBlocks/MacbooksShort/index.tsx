@@ -11,7 +11,7 @@ import MacbooksShortProps from "./macbooks.props";
 
 import IMacbook from "interfaces/macbook.interface";
 
-const MacbooksShort = ({ macbooks }: MacbooksShortProps) => {
+const MacbooksShort = ({ macbooks }: MacbooksShortProps): JSX.Element => {
     const settings = {
         infinite: true,
         slidesToShow: 3,

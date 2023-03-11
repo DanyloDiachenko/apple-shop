@@ -14,9 +14,11 @@ import MacbooksShort from "components/contentBlocks/MacbooksShort";
 import IphoneBlock from "components/contentBlocks/Iphone";
 import IphonesShort from "components/contentBlocks/IphonesShort";
 import IpadBlock from "components/contentBlocks/Ipad";
-import IMacbook from "interfaces/macbook.interface";
 
-const Home = ({ macbooks }: HomeProps): JSX.Element => {
+import IMacbook from "interfaces/macbook.interface";
+import IIphone from "interfaces/iphone.interface";
+
+const Home = ({ macbooks, iphones }: HomeProps): JSX.Element => {
     const [title, setTitle] = useState<string>("");
     const [description, setDescription] = useState<string>("");
 
@@ -75,7 +77,7 @@ const Home = ({ macbooks }: HomeProps): JSX.Element => {
                 <MacbookBlock />
                 <MacbooksShort macbooks={macbooks} />
                 <IphoneBlock />
-                <IphonesShort />
+                <IphonesShort iphones={iphones} />
                 <IpadBlock />
             </main>
         </>
@@ -86,15 +88,20 @@ export default Home;
 
 interface HomeProps extends Record<string, unknown> {
     macbooks: IMacbook[];
+    iphones: IIphone[];
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     const { data: macbooks } = await axios.get<IMacbook[]>(
         process.env.NEXT_PUBLIC_BACKEND_URL + "short-macbooks"
     );
+    const { data: iphones } = await axios.get<IIphone[]>(
+        process.env.NEXT_PUBLIC_BACKEND_URL + "short-iphones"
+    );
     return {
         props: {
             macbooks: macbooks,
+            iphones: iphones,
         },
     };
 };

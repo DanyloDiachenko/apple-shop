@@ -1,4 +1,4 @@
-export default interface IImages {
+export default interface IImage {
     src: string;
     alt: string;
 }

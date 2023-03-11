@@ -2,9 +2,9 @@ import Trans from "inc/locale/Trans";
 
 import Button from "components/UI/Button";
 
-const IphoneBlock = () => {
+const IphoneBlock = (): JSX.Element => {
     return (
-        <section className="container mt-10 row align-items-center  macbooks-main">
+        <section className="container mt-10 row align-items-center macbooks-main">
             <div className="col-lg-6 col-md-12 right-col left-col">
                 <div className="img-wrapper">
                     <img

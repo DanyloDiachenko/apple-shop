@@ -96,6 +96,7 @@
 
     button {
         margin-top: 20px;
+        width: 45%;
     }
 
     @media (max-width: 1400px) {
@@ -107,6 +108,7 @@
         display: block;
 
         button {
+            width: 100%;
             display: block;
             margin: 20px auto 0 auto;
         }

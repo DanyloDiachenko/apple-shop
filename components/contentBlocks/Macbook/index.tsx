@@ -2,7 +2,7 @@ import Trans from "inc/locale/Trans";
 
 import Button from "components/UI/Button";
 
-const MacbookBlock = () => {
+const MacbookBlock = (): JSX.Element => {
     return (
         <section className="container mt-10 row align-items-center macbooks-main center">
             <div className="col-lg-6 col-md-12">

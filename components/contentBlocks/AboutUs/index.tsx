@@ -54,7 +54,7 @@ const AboutUs = (): JSX.Element => {
             </div>
             <div className="col-lg-6 col-md-12 about-right-col">
                 <div>
-                    {aboutUs.map((about) => (
+                    {aboutUs.map((about: IAboutUS) => (
                         <div key={about.title} className="about-item">
                             <h3>{about.title}</h3>
                             <p>

@@ -2,29 +2,16 @@ import { useState, useEffect } from "react";
 
 import Slider from "react-slick";
 
-import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
-
 import Card from "components/UI/Card";
 
-import IIphone from "./iphone.interface";
+import IIphone from "interfaces/iphone.interface";
 
-const IphonesShort = () => {
-    const [iphones, setIphones] = useState<IIphone[]>([]);
+import NextArrow from "helpers/NextArrow";
+import PrevArrow from "helpers/PrevArrow";
 
-    const PrevArrow = ({ onClick }: { onClick: () => void }): JSX.Element => {
-        return (
-            <button className="arrow" onClick={onClick}>
-                <SlArrowLeft />
-            </button>
-        );
-    };
-    const NextArrow = ({ onClick }: { onClick: () => void }): JSX.Element => {
-        return (
-            <button className="arrow" onClick={onClick}>
-                <SlArrowRight />
-            </button>
-        );
-    };
+import IphonesShortProps from "./iphones.props";
+
+const IphonesShort = ({ iphones }: IphonesShortProps): JSX.Element => {
     const settings = {
         infinite: true,
         slidesToShow: 4,
@@ -54,13 +41,11 @@ const IphonesShort = () => {
         ],
     };
 
-    useEffect(() => {
+    /* useEffect(() => {
         fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "short-iphones")
             .then((res: Response) => res.json())
             .then((data: IIphone[]) => setIphones(data));
-    }, []);
-
-    console.log(iphones);
+    }, []); */
 
     return (
         <section className="container row justify-content-between mt-4 slider-details">

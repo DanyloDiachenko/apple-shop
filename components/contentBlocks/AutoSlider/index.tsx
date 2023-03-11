@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 
-import IImages from "./images.interface";
+import IImage from "./images.interface";
 
 const AutoSlider = (): JSX.Element => {
-    const images: IImages[] = [
+    const images: IImage[] = [
         {
             src: "/images/slider/macbook-auto-slider.png",
             alt: "macbook",
@@ -56,7 +56,7 @@ const AutoSlider = (): JSX.Element => {
     return (
         <section className="mt-10">
             <Slider {...settings}>
-                {images.map((img) => (
+                {images.map((img: IImage) => (
                     <div key={img.src}>
                         <img
                             className="img-fluid"
