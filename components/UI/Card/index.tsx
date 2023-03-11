@@ -5,9 +5,9 @@ import Trans from "inc/locale/Trans";
 
 import Button from "components/UI/Button";
 
-import IProps from "./props.interface";
+import CardProps from "./props.interface";
 
-const Card = (props: IProps) => {
+const Card = (props: CardProps) => {
     const {
         size,
         key,
@@ -63,7 +63,7 @@ const Card = (props: IProps) => {
                 <div className="price-buy mt-4 pb-4">
                     <div className="price">
                         <h6>$ {price}</h6>
-                        {prevPrice && (
+                        {prevPrice !== undefined && (
                             <h6 className="price-past">$ {prevPrice}</h6>
                         )}
                     </div>

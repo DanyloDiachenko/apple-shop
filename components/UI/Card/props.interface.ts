@@ -1,4 +1,4 @@
-export default interface IProps {
+export default interface CardProps {
     size: "lg" | "sm";
     key: string;
     id: number;
@@ -8,5 +8,5 @@ export default interface IProps {
     isDiscount: boolean;
     rate: number;
     price: number;
-    prevPrice: number;
+    prevPrice?: number;
 }
