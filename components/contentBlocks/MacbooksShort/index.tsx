@@ -2,36 +2,23 @@ import { useState, useEffect } from "react";
 
 import Slider from "react-slick";
 
-import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
-
 import Card from "components/UI/Card";
+
+import NextArrow from "helpers/NextArrow";
+import PrevArrow from "helpers/PrevArrow";
+
+import MacbooksShortProps from "./macbooks.props";
 
 import IMacbook from "interfaces/macbook.interface";
 
-const MacbooksShort = () => {
-    const [macbooks, setMacbooks] = useState<IMacbook[]>([]);
-
-    const PrevArrow = ({ onClick }: { onClick: () => void }): JSX.Element => {
-        return (
-            <button className="arrow" onClick={onClick}>
-                <SlArrowLeft />
-            </button>
-        );
-    };
-    const NextArrow = ({ onClick }: { onClick: () => void }): JSX.Element => {
-        return (
-            <button className="arrow" onClick={onClick}>
-                <SlArrowRight />
-            </button>
-        );
-    };
+const MacbooksShort = ({ macbooks }: MacbooksShortProps) => {
     const settings = {
         infinite: true,
         slidesToShow: 3,
         dots: true,
         slidesToScroll: 1,
-        nextArrow: <NextArrow onClick={() => {}} />,
-        prevArrow: <PrevArrow onClick={() => {}} />,
+        nextArrow: <NextArrow onClick={(): void => {}} />,
+        prevArrow: <PrevArrow onClick={(): void => {}} />,
         responsive: [
             {
                 breakpoint: 1400,
@@ -47,12 +34,6 @@ const MacbooksShort = () => {
             },
         ],
     };
-
-    useEffect(() => {
-        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "short-macbooks")
-            .then((res: Response) => res.json())
-            .then((data: IMacbook[]) => setMacbooks(data));
-    }, []);
 
     return (
         <section className="container row justify-content-between mt-4 slider-details">

@@ -1,7 +1,10 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import { NextRouter, useRouter } from "next/router";
 
 import { useState, useEffect } from "react";
+
+import axios from "axios";
 
 import MainSlider from "components/contentBlocks/MainSlider";
 import AboutUs from "components/contentBlocks/AboutUs";
@@ -11,8 +14,9 @@ import MacbooksShort from "components/contentBlocks/MacbooksShort";
 import IphoneBlock from "components/contentBlocks/Iphone";
 import IphonesShort from "components/contentBlocks/IphonesShort";
 import IpadBlock from "components/contentBlocks/Ipad";
+import IMacbook from "interfaces/macbook.interface";
 
-const Home = (): JSX.Element => {
+const Home = ({ macbooks }: HomeProps): JSX.Element => {
     const [title, setTitle] = useState<string>("");
     const [description, setDescription] = useState<string>("");
 
@@ -69,7 +73,7 @@ const Home = (): JSX.Element => {
                 <AboutUs />
                 <AutoSlider />
                 <MacbookBlock />
-                <MacbooksShort />
+                <MacbooksShort macbooks={macbooks} />
                 <IphoneBlock />
                 <IphonesShort />
                 <IpadBlock />
@@ -79,3 +83,18 @@ const Home = (): JSX.Element => {
 };
 
 export default Home;
+
+interface HomeProps extends Record<string, unknown> {
+    macbooks: IMacbook[];
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+    const { data: macbooks } = await axios.get<IMacbook[]>(
+        process.env.NEXT_PUBLIC_BACKEND_URL + "short-macbooks"
+    );
+    return {
+        props: {
+            macbooks: macbooks,
+        },
+    };
+};

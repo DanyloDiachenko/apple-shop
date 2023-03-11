@@ -8,4 +8,4 @@ export default interface IMacbook {
 	rate: number;
 	price: number;
 	prevPrice?: number;
-}
+};

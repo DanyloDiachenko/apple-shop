@@ -1,30 +1,15 @@
-import Image from "next/image";
-
 import Slider from "react-slick";
-
-import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 import IImage from "./images.interface";
 
 import Trans from "inc/locale/Trans";
 
+import NextArrow from "helpers/NextArrow";
+import PrevArrow from "helpers/PrevArrow";
+
 import Button from "components/UI/Button";
 
 const MainSlider = (): JSX.Element => {
-    const PrevArrow = ({ onClick }: { onClick: () => void }): JSX.Element => {
-        return (
-            <div className="arrow" onClick={onClick}>
-                <SlArrowLeft />
-            </div>
-        );
-    };
-    const NextArrow = ({ onClick }: { onClick: () => void }): JSX.Element => {
-        return (
-            <div className="arrow" onClick={onClick}>
-                <SlArrowRight />
-            </div>
-        );
-    };
     const settings = {
         dots: true,
         infinite: true,
