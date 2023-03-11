@@ -14,11 +14,11 @@ import MacbooksShort from "components/contentBlocks/MacbooksShort";
 import IphoneBlock from "components/contentBlocks/Iphone";
 import IphonesShort from "components/contentBlocks/IphonesShort";
 import IpadBlock from "components/contentBlocks/Ipad";
+import IpadsShort from "components/contentBlocks/IpadsShort";
 
-import IMacbook from "interfaces/macbook.interface";
-import IIphone from "interfaces/iphone.interface";
+import IProduct from "interfaces/product.interface";
 
-const Home = ({ macbooks, iphones }: HomeProps): JSX.Element => {
+const Home = ({ macbooks, iphones, ipads }: HomeProps): JSX.Element => {
     const [title, setTitle] = useState<string>("");
     const [description, setDescription] = useState<string>("");
 
@@ -79,6 +79,7 @@ const Home = ({ macbooks, iphones }: HomeProps): JSX.Element => {
                 <IphoneBlock />
                 <IphonesShort iphones={iphones} />
                 <IpadBlock />
+                <IpadsShort ipads={ipads} />
             </main>
         </>
     );
@@ -87,21 +88,26 @@ const Home = ({ macbooks, iphones }: HomeProps): JSX.Element => {
 export default Home;
 
 interface HomeProps extends Record<string, unknown> {
-    macbooks: IMacbook[];
-    iphones: IIphone[];
+    macbooks: IProduct[];
+    iphones: IProduct[];
+    ipads: IProduct[];
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-    const { data: macbooks } = await axios.get<IMacbook[]>(
+    const { data: macbooks } = await axios.get<IProduct[]>(
         process.env.NEXT_PUBLIC_BACKEND_URL + "short-macbooks"
     );
-    const { data: iphones } = await axios.get<IIphone[]>(
+    const { data: iphones } = await axios.get<IProduct[]>(
         process.env.NEXT_PUBLIC_BACKEND_URL + "short-iphones"
+    );
+    const { data: ipads } = await axios.get<IProduct[]>(
+        process.env.NEXT_PUBLIC_BACKEND_URL + "short-ipads"
     );
     return {
         props: {
             macbooks: macbooks,
             iphones: iphones,
+            ipads: ipads,
         },
     };
 };

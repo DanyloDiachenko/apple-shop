@@ -9,9 +9,9 @@ import IProduct from "interfaces/product.interface";
 import NextArrow from "helpers/NextArrow";
 import PrevArrow from "helpers/PrevArrow";
 
-import IphonesShortProps from "./iphones.props";
+import IpadsShortProps from "./ipads.props";
 
-const IphonesShort = ({ iphones }: IphonesShortProps): JSX.Element => {
+const IpadsShort = ({ ipads }: IpadsShortProps): JSX.Element => {
     const settings = {
         infinite: true,
         slidesToShow: 4,
@@ -47,7 +47,7 @@ const IphonesShort = ({ iphones }: IphonesShortProps): JSX.Element => {
                 className="d-flex align-items-center justify-content-between"
                 {...settings}
             >
-                {iphones.map((macbook: IProduct) => (
+                {ipads.map((macbook: IProduct) => (
                     <Card {...macbook} size="sm" key={String(macbook.id)} />
                 ))}
             </Slider>
@@ -55,4 +55,4 @@ const IphonesShort = ({ iphones }: IphonesShortProps): JSX.Element => {
     );
 };
 
-export default IphonesShort;
+export default IpadsShort;

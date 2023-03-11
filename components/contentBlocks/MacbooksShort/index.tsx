@@ -9,7 +9,7 @@ import PrevArrow from "helpers/PrevArrow";
 
 import MacbooksShortProps from "./macbooks.props";
 
-import IMacbook from "interfaces/macbook.interface";
+import IProduct from "interfaces/product.interface";
 
 const MacbooksShort = ({ macbooks }: MacbooksShortProps): JSX.Element => {
     const settings = {
@@ -41,7 +41,7 @@ const MacbooksShort = ({ macbooks }: MacbooksShortProps): JSX.Element => {
                 className="d-flex align-items-center justify-content-between"
                 {...settings}
             >
-                {macbooks.map((macbook: IMacbook) => (
+                {macbooks.map((macbook: IProduct) => (
                     <Card {...macbook} size="lg" key={String(macbook.id)} />
                 ))}
             </Slider>

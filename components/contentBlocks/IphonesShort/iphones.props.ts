@@ -1,5 +1,5 @@
-import IIphone from 'interfaces/iphone.interface';
+import IProduct from 'interfaces/product.interface';
 
 export default interface IphonesShortProps {
-	iphones: IIphone[];
+	iphones: IProduct[];
 };

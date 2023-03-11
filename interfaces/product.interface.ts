@@ -1,4 +1,4 @@
-export default interface IMacbook {
+export default interface IProduct {
 	key: string;
 	id: number;
 	title: string;

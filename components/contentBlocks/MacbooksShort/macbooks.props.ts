@@ -1,5 +1,5 @@
-import IMacbook from 'interfaces/macbook.interface';
+import IProduct from 'interfaces/product.interface';
 
 export default interface MacbooksShortProps {
-	macbooks: IMacbook[];
+	macbooks: IProduct[];
 };
