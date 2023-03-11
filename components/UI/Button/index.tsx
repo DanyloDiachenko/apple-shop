@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
-import ButtonProps from "./button.interface";
+
+import ButtonProps from "./button.props";
 
 const Button = ({ children, ...props }: PropsWithChildren<ButtonProps>) => {
     return (

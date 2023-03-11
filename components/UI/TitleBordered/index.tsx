@@ -1,4 +1,4 @@
-import TitleBorderedProps from "./titleBordered.interface";
+import TitleBorderedProps from "./titleBordered.props";
 
 const TitleBordered = ({ children }: TitleBorderedProps) => {
     return <span className="title-bordered">{children}</span>;

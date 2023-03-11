@@ -4,8 +4,8 @@ import { useRouter, NextRouter } from "next/router";
 
 import { useState } from "react";
 
-import { LanguageChooseProps } from "./language.props";
-import { ILanguageItem } from "./language.props";
+import { LanguageChooseProps } from "./language.interface";
+import { ILanguageItem } from "./language.interface";
 
 const LanguageChoose = ({ size }: LanguageChooseProps): JSX.Element => {
     const router: NextRouter = useRouter();

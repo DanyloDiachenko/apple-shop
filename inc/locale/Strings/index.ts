@@ -1,6 +1,6 @@
-import StringProps from "./strings.interface";
+import IString from "./strings.interface";
 
-const strings: StringProps = {
+const strings: IString = {
     Macbook: {
         ru: "Macbook",
         uk: "Macbook",

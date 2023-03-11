@@ -6,7 +6,7 @@ import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 import Card from "components/UI/Card";
 
-import IMacbook from './macbook.interface';
+import IMacbook from "interfaces/macbook.interface";
 
 const MacbooksShort = () => {
     const [macbooks, setMacbooks] = useState<IMacbook[]>([]);

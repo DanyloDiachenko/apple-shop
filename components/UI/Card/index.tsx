@@ -5,7 +5,7 @@ import Trans from "inc/locale/Trans";
 
 import Button from "components/UI/Button";
 
-import CardProps from "./props.interface";
+import CardProps from "./card.props";
 
 const Card = (props: CardProps) => {
     const {
