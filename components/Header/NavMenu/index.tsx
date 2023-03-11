@@ -5,10 +5,10 @@ import Trans from "inc/locale/Trans";
 import TitleBordered from "components/UI/TitleBordered";
 
 import { NavMenuProps } from "./navItems.interface";
-import { SizeProps } from "./navItems.interface";
+import { INavMenu } from "./navItems.interface";
 
-const NavMenu = ({ size }: SizeProps) => {
-    const navMenu: NavMenuProps[] = [
+const NavMenu = ({ size }: NavMenuProps) => {
+    const navMenu: INavMenu[] = [
         {
             title: "Macbook",
             link: "/macbooks",
@@ -33,7 +33,7 @@ const NavMenu = ({ size }: SizeProps) => {
 
     return (
         <>
-            {navMenu.map((nav) => (
+            {navMenu.map((nav: INavMenu) => (
                 <h6 key={nav.link} className={`${size == "sm" && "mt-4"}`}>
                     <Link
                         className={`${

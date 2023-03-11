@@ -1,9 +1,9 @@
-export interface SizeProps {
+export interface LanguageChooseProps {
 	size?: string;
 };
 
-export interface LanguageItemProps {
+export interface ILanguageItem {
 	title: string;
 	locale: string;
-	img: string;
+	src: string;
 };

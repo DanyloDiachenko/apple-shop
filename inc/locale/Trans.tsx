@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
-import strings from "./strings";
+
+import strings from "./Strings";
 
 const Trans = ({ string }: { string: string }): JSX.Element => {
     const router = useRouter();

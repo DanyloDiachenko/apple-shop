@@ -1,6 +1,6 @@
-import IStrings from "./strings.interface";
+import StringProps from "./strings.interface";
 
-const strings: IStrings = {
+const strings: StringProps = {
     Macbook: {
         ru: "Macbook",
         uk: "Macbook",
@@ -57,11 +57,11 @@ const strings: IStrings = {
         en: "Discover",
     },
     "как бренд, сервис и компанию на нашем веб-сайте. Здесь вы найдете интересующую вас информацию о":
-        {
-            ru: "как бренд, сервис и компанию на нашем веб-сайте. Здесь вы найдете интересующую вас информацию о",
-            uk: "як бренд, сервіс і компанію на нашій веб-сторінці. Тут ви знайдете цікаву для вас інформацію про",
-            en: "as brend, servise and company on our web-page. Here you will find the information you are interested in",
-        },
+    {
+        ru: "как бренд, сервис и компанию на нашем веб-сайте. Здесь вы найдете интересующую вас информацию о",
+        uk: "як бренд, сервіс і компанію на нашій веб-сторінці. Тут ви знайдете цікаву для вас інформацію про",
+        en: "as brend, servise and company on our web-page. Here you will find the information you are interested in",
+    },
     моделях: {
         ru: "моделях",
         uk: "моделях",

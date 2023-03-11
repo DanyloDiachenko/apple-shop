@@ -4,19 +4,19 @@ import { useRouter, NextRouter } from "next/router";
 
 import { useState } from "react";
 
-import { SizeProps } from "./language.props";
-import { LanguageItemProps } from "./language.props";
+import { LanguageChooseProps } from "./language.props";
+import { ILanguageItem } from "./language.props";
 
-const LanguageChoose = ({ size }: SizeProps): JSX.Element => {
+const LanguageChoose = ({ size }: LanguageChooseProps): JSX.Element => {
     const router: NextRouter = useRouter();
 
     const [languageMenu, setLanguageMenu] = useState<boolean>(false);
     const [language, setLanguage] = useState<string>(router.locale || "ru");
 
-    const languages: LanguageItemProps[] = [
-        { title: "Рус", locale: "ru", img: "/images/icons/russian-flag.png" },
-        { title: "Укр", locale: "uk", img: "/images/icons/ukraine-flag.png" },
-        { title: "En", locale: "en", img: "/images/icons/usa-flag.png" },
+    const languages: ILanguageItem[] = [
+        { title: "Рус", locale: "ru", src: "/images/icons/russian-flag.png" },
+        { title: "Укр", locale: "uk", src: "/images/icons/ukraine-flag.png" },
+        { title: "En", locale: "en", src: "/images/icons/usa-flag.png" },
     ];
 
     const setPrevLangMenu = (): void => {
@@ -76,7 +76,7 @@ const LanguageChoose = ({ size }: SizeProps): JSX.Element => {
                     }}
                     className={`${languageMenu && "lang-additional"}`}
                 >
-                    {languages.map((lang: LanguageItemProps) => (
+                    {languages.map((lang: ILanguageItem) => (
                         <Link
                             key={lang.title}
                             onClick={(): void => setLanguage(lang.locale)}
@@ -86,7 +86,7 @@ const LanguageChoose = ({ size }: SizeProps): JSX.Element => {
                         >
                             <div className="mt-3">
                                 <Image
-                                    src={lang.img}
+                                    src={lang.src}
                                     alt={lang.locale}
                                     style={{ margin: "0 7px" }}
                                     width={35}

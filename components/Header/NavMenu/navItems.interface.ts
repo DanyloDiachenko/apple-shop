@@ -1,8 +1,8 @@
-export interface NavMenuProps {
+export interface INavMenu {
 	title: string;
 	link: string;
 }
 
-export interface SizeProps {
+export interface NavMenuProps {
 	size?: string;
 };

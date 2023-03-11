@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
-import strings from "./strings";
+
+import strings from "./Strings";
 
 const translate = (string: string) => {
     const router = useRouter();
 
-    //@ts-ignore
     return strings[string][router.locale ? router.locale : "ru"];
 };
 

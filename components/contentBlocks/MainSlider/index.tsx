@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
-import IImages from "./images.interface";
+import IImage from "./images.interface";
 
 import Trans from "inc/locale/Trans";
 
@@ -35,7 +35,7 @@ const MainSlider = (): JSX.Element => {
         prevArrow: <PrevArrow onClick={(): void => {}} />,
     };
 
-    const images: IImages[] = [
+    const images: IImage[] = [
         {
             title: 'MacBook Pro 14" M2',
             description: "2022 / 3000$",
@@ -62,7 +62,7 @@ const MainSlider = (): JSX.Element => {
                 className="d-flex align-items-center justify-content-between"
                 {...settings}
             >
-                {images.map((img) => (
+                {images.map((img: IImage) => (
                     <div key={img.title} className="slider-wrapper">
                         <div className="img-wrapper">
                             <div key={img.title} className="img-item">
