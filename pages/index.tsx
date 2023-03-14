@@ -75,11 +75,11 @@ const Home = ({ macbooks, iphones, ipads }: HomeProps): JSX.Element => {
                 <AboutUs />
                 <AutoSlider />
                 <MacbookBlock />
-                <MacbooksShort macbooks={macbooks} />
+                <MacbooksShort products={macbooks} />
                 <IphoneBlock />
-                <IphonesShort iphones={iphones} />
+                <IphonesShort products={iphones} />
                 <IpadBlock />
-                <IpadsShort ipads={ipads} />
+                <IpadsShort products={ipads} />
             </main>
         </>
     );

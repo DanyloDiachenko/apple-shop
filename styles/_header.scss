@@ -1,6 +1,33 @@
 header {
-    height: 100px;
     background: rgba(40, 5, 32, 0.69);
+    padding: 15px;
+
+    @media (max-width: 991px) {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        background: rgb(40, 5, 32);
+    }
+
+    .contacts {
+        display: flex;
+        margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        svg {
+            width: 25px;
+            height: 25px;
+            margin-top: -7px;
+        }
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
 
     .nav-item {
         color: white;
@@ -89,6 +116,7 @@ header {
             svg {
                 width: 40px;
                 height: 40px;
+                cursor: pointer;
             }
 
             .content {
@@ -97,7 +125,7 @@ header {
                 position: absolute;
                 z-index: 10;
                 right: -35px;
-                top: 70px;
+                top: 55px;
                 background: #210c1b;
 
                 text-align: center;

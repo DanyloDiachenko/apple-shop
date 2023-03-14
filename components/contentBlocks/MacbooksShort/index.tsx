@@ -7,11 +7,11 @@ import Card from "components/UI/Card";
 import NextArrow from "helpers/NextArrow";
 import PrevArrow from "helpers/PrevArrow";
 
-import MacbooksShortProps from "./macbooks.props";
+import ProductsShortProps from "interfaces/products.props";
 
 import IProduct from "interfaces/product.interface";
 
-const MacbooksShort = ({ macbooks }: MacbooksShortProps): JSX.Element => {
+const MacbooksShort = ({ products }: ProductsShortProps): JSX.Element => {
     const settings = {
         infinite: true,
         slidesToShow: 3,
@@ -41,7 +41,7 @@ const MacbooksShort = ({ macbooks }: MacbooksShortProps): JSX.Element => {
                 className="d-flex align-items-center justify-content-between"
                 {...settings}
             >
-                {macbooks.map((macbook: IProduct) => (
+                {products.map((macbook: IProduct) => (
                     <Card {...macbook} size="lg" key={String(macbook.id)} />
                 ))}
             </Slider>

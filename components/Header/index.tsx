@@ -3,15 +3,15 @@ import Link from "next/link";
 
 import { useState, useEffect } from "react";
 
-import { RxHamburgerMenu } from "react-icons/rx";
-import { TfiClose as CloseIcon } from "react-icons/tfi";
-
 import Trans from "inc/locale/Trans";
 import translate from "inc/locale/transFunc";
 
-import NavMenu from "./NavMenu";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { TfiClose as CloseIcon } from "react-icons/tfi";
 
+import NavMenu from "./NavMenu";
 import LanguageChoose from "./LanguageChoose";
+import Contacts from "./Contacts";
 
 const Header = (): JSX.Element => {
     const [burgerMenu, setBurgerMenu] = useState<boolean>(false);
@@ -23,6 +23,7 @@ const Header = (): JSX.Element => {
     return (
         <header className="container-fluid d-flex align-items-center">
             <div className="container row">
+                <Contacts />
                 <div className="col-7 d-flex align-items-center justify-content-between">
                     <Link href={"/"}>
                         <Image
